@@ -2,7 +2,8 @@
 Bagian Yang Diperbaiki:
 1. Deprecated code pada SafeAreaView diganti dengan library react-native-safe-area-context
 2. set loading state untuk User Experience (UX) dan Keamanan Aplikasi.
-3. bug typing pada website
+3. Saya melakukan perbaikan dengan membagi kode menjadi tiga bagian terpisah: LoginScreen.tsx (UI), useLogin.ts(Logika/Hook), dan LoginScreen.styles.ts(Styling) untuk            menerapkan prinsip best practice arsitektur.
+4. bug typing pada website
 
 ** CATATAN REFLEKSI **
 1. FITUR IDE/AI YANG PALING MEMBANTU:  
@@ -17,6 +18,7 @@ Bagian Yang Diperbaiki:
       menjalankan simulator yang berat terlebih dahulu.
 
 2. Bagian yang Tidak Bisa Diserahkan ke AI:
+   - Hasil awal AI memberikan kode dalam satu file tunggal yang besar.
    - keamanan, library yang digunakan, integrasi alur bisnis 
      yang spesifik sesuai standart perusahaan tetap harus ditentukan secara 
      manual oleh developer.
@@ -26,13 +28,14 @@ Bagian Yang Diperbaiki:
    - user experience seperti rasa nyaman saat menyentuh tombol atau kelancaran 
      transisi layar adalah hal subjektif yang hanya bisa divalidasi oleh pengalaman manusia.
 
-3. Risiko Tanpa Review: 
+4. Risiko Tanpa Review: 
    - Ada risiko AI memberikan solusi atau library yang terlalu umum yang mungkin 
      tidak kompatibel dengan library tertentu yang digunakan oleh developer.
    - Ada risiko AI memberikan code atau syntax yang berasal dari luar framework yang 
      digunakan developer
    - AI bisa memberikan kode yang deprecated atau usang menyebabkan 
      resiko keamanan dan bug
+   - AI cenderung memberikan solusi cepat dalam satu file besar agar kode langsung jalan. Jika langsung dipakai tanpa review, proyek akan sulit dikelola (maintenance) dan sulit             dikembangkan.
    - bug pada UI di perangkat asli.
 
 
